@@ -6,5 +6,10 @@ pipeline {
         echo 'Start building'
       }
     }
+    stage('Archive') {
+      steps {
+        archiveArtifacts 'Archive'
+      }
+    }
   }
 }
