@@ -8,7 +8,7 @@ pipeline {
     }
     stage('Archive') {
       steps {
-        archiveArtifacts 'Archive'
+        archiveArtifacts(artifacts: '*', excludes: 'Jenkinsfile')
       }
     }
   }
